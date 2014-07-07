@@ -75,4 +75,21 @@ public class Method {
         return revString;
     }
     
+    //Unique Chars, checks if string has all unique values.
+    public boolean uniqueChars(String s)
+    {
+        char [] a = s.toCharArray();
+        
+        for(int i = 0; i < a.length; i++)
+        {
+            for(int j = 0; j < a.length; j++)
+            {
+                if(a[i] == a[j] && i != j)
+                    return false;
+            }
+        }
+        
+        return true;
+    }
+    
 }

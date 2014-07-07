@@ -53,6 +53,14 @@ public class MethodCollection {
         
         String rev = "Reverse This";
         System.out.println(reverse.reverseString(rev));
+        
+        
+        //Unique Chars
+        Method unique = new Method();
+        String b1 = "abcde";
+        String b2 = "abbcd";
+        System.out.println(unique.uniqueChars(b1));
+        System.out.println(unique.uniqueChars(b2));
     }
     
 }
