@@ -61,4 +61,18 @@ public class Method {
     }
     
     
+    //Reverse String function
+    public String reverseString(String s)
+    {
+        char [] a = s.toCharArray();
+        String revString = "";
+        
+        for(int i = a.length; i > 0; i--)
+        {
+            revString += a[i-1];
+        }
+    
+        return revString;
+    }
+    
 }

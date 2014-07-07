@@ -47,6 +47,12 @@ public class MethodCollection {
         String s2 = "ooBoob";
         
         System.out.println(permutation.stringPermutation(s1, s2));
+        
+        //Reverse String
+        Method reverse = new Method();
+        
+        String rev = "Reverse This";
+        System.out.println(reverse.reverseString(rev));
     }
     
 }
