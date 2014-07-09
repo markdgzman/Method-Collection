@@ -61,6 +61,10 @@ public class MethodCollection {
         String b2 = "abbcd";
         System.out.println(unique.uniqueChars(b1));
         System.out.println(unique.uniqueChars(b2));
+        
+        //Fibbonacci
+        Method fib = new Method();
+        System.out.println(fib.fib(90));
     }
     
 }

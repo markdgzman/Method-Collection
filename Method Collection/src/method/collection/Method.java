@@ -92,4 +92,24 @@ public class Method {
         return true;
     }
     
+    //Nth Fibonacchi Sequence
+    public long fib(int n)
+    {
+        long fib1 = 1;
+        long fib2 = 1;
+        long fib3 = 0;
+        
+        if(n == 1 || n == 2)
+            return 1;
+        
+        
+        for(int i = 2; i < n; i++)
+        {
+            fib3 = fib1 + fib2;
+            fib1 = fib2;
+            fib2 = fib3;
+        }
+        
+        return fib3;
+    }
 }
