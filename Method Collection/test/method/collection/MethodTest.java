@@ -65,6 +65,13 @@ public class MethodTest {
         boolean expResult = false;
         boolean result = instance.stringPermutation(a, b);
         assertEquals(expResult, result);
+        
+        String c = "BBABBAEEDGG";
+        String d = "GGDEEABBBBA";
+        Method instance2 = new Method();
+        boolean expResult2 = true;
+        boolean result2 = instance.stringPermutation(c, d);
+        assertEquals(expResult2, result2);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
@@ -105,13 +112,26 @@ public class MethodTest {
     @Test
     public void testFib() {
         System.out.println("fib");
-        int n = 0;
+        int n = 11;
         Method instance = new Method();
-        long expResult = 0L;
+        long expResult = 89;
         long result = instance.fib(n);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
+    }
+    
+    /**
+     * Test of vowelCount method, of class Method.
+     */
+    @Test
+    public void testVowelCount() {
+        System.out.println("vowelCount");
+        Method instance = new Method();
+        String s = "This is a sentence";
+        int expResult = 6;
+        long result = instance.vowelCount(s);
+        assertEquals(expResult, result);
     }
     
 }
