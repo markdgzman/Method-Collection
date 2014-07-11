@@ -134,4 +134,14 @@ public class MethodTest {
         assertEquals(expResult, result);
     }
     
+    @Test
+    public void testWordCount() {
+        System.out.println("wordCount");
+        Method instance = new Method();
+        String s = "This is a sentence! Another one. And another.";
+        int expResult = 8;
+        long result = instance.wordInString(s);
+        assertEquals(expResult, result);
+    }
+    
 }

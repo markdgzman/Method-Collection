@@ -130,4 +130,12 @@ public class Method {
         
         return count;
     }
+    
+    //Words in string, counts number of words in a string
+    public int wordInString(String s )
+    {
+        
+        String [] split = s.split("\\s+");
+        return split.length;
+    }
 }
