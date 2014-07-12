@@ -138,4 +138,46 @@ public class Method {
         String [] split = s.split("\\s+");
         return split.length;
     }
+    
+    //String compression. Compresses a string into the letter and number of 
+    //times it shows up afterwards;
+    public String stringCompression(String s)
+    {
+        char [] a = s.toCharArray();
+        String newString = "", returnString = "";
+        int counter = 0;
+        char currentChar;
+        
+        for(int i = 0; i < a.length; i++)
+        {
+            currentChar = a[i];
+            newString = ""; 
+            counter = 0;
+            
+            for(int j = 0; j< a.length; j++)
+            {      
+                if(a[i] == a[j])
+                {
+                    counter++; 
+                }
+                else if(a[i] != a[j])
+                {
+                    newString += a[j];
+                }  
+            }
+            
+            returnString += currentChar +""+ counter;
+            a = newString.toCharArray();      
+        }
+        
+        return returnString;
+    }
+    
+    //Alternate string compression, takes the character and adds a number
+    //next to it depending on how many times it shows up
+    public String alternateStringCompression(String s)
+    {
+        
+    }
+    
 }

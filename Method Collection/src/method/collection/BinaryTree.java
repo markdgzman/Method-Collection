@@ -12,6 +12,18 @@ package method.collection;
  */
 public class BinaryTree {
     
+    public class Node {    
+    
+        private Object data;
+        Node left;
+        Node right;
+        
+        public Node(Object data)
+        {
+            this.data = data;
+        }
+}
+    
     Node tree;
     
     public void insert(Object data)

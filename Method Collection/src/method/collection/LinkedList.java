@@ -10,14 +10,17 @@ package method.collection;
  *
  * @author Mark
  */
-public class Node {    
+public class LinkedList {
     
-        private Object data;
-        Node left;
-        Node right;
-        
+    public class Node
+    {
+        Object data;
+        Node next;
+    
         public Node(Object data)
         {
             this.data = data;
         }
+    }
+    
 }

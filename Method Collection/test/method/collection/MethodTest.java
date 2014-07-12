@@ -144,4 +144,14 @@ public class MethodTest {
         assertEquals(expResult, result);
     }
     
+    @Test
+    public void testStringCompression() {
+        System.out.println("stringCompression");
+        Method instance = new Method();
+        String s = "aabcccccaaa";
+        String expResult = "a5b1c5";
+        String result = instance.stringCompression(s);
+        assertEquals(expResult, result);
+    }
+    
 }
