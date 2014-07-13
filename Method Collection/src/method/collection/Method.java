@@ -177,7 +177,34 @@ public class Method {
     //next to it depending on how many times it shows up
     public String alternateStringCompression(String s)
     {
+        char [] a = s.toCharArray();
+        int counter = 0;
+        String newString = "";
+        char currentChar;
+        int nextLine = 0;
         
+        for(int i =0; i < a.length; i = nextLine)
+        {
+            currentChar = a[i];
+            counter = 0;
+            
+            for(int j = i+1; j < a.length-1; j++)
+            {  
+                if(currentChar == a[j])
+                {
+                    counter++;
+                }
+                else
+                {   
+                    nextLine = j;
+                    break;
+                }
+            }
+            
+            newString += currentChar + "" + (counter+1);
+            currentChar = a[i];    
+        }
+        return newString;
     }
     
 }

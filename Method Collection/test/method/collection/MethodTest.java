@@ -153,5 +153,14 @@ public class MethodTest {
         String result = instance.stringCompression(s);
         assertEquals(expResult, result);
     }
-    
+        
+    @Test
+    public void testAlternateStringCompression() {
+        System.out.println("stringCompression");
+        Method instance = new Method();
+        String s = "aabcccccaaa";
+        String expResult = "a2b1c5a3";
+        String result = instance.alternateStringCompression(s);
+        assertEquals(expResult, result);
+    }
 }
