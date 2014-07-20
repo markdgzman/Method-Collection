@@ -200,4 +200,31 @@ public class Method {
         return newString;
     }
     
+    public int [] selectionSort(int [] a)
+    {
+        int min; int pos = 0;
+        
+        for(int i = 0; i < a.length; i++)
+        {
+            min = a[i];
+            
+            for(int j = i; j < a.length; j++)
+            {
+                if(min > a[j])
+                {
+                    min = a[j];
+                    pos = j;
+                }          
+            }
+            
+            if(min < a[i])
+            {
+                int temp = a[i];
+                a[i] = a[pos];
+                a[pos] = temp;
+            }
+            
+        }   
+        return a;
+    }
 }
