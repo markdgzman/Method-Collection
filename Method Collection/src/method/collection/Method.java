@@ -227,4 +227,40 @@ public class Method {
         }   
         return a;
     }
+    
+    //Decimal to Binary
+    public String decimalToBinary(int dec)
+    {
+        String bin = "";
+        
+        while(dec > 0)
+        {
+            bin = dec%2 + bin;
+            dec /= 2;
+        }
+        
+        return bin;
+    }
+    
+    //Given an input of hour and minutes returns the corresponding angle
+    //On a round clock
+    public int clockAngle(int hour, int min)
+    {
+        //Degrees in clock
+        int clockDegrees = 360;
+
+        double doubleAngleHour = 3.0/12.0;
+        int angleHour = (int)(clockDegrees * (hour/12.0));
+        int angleMin = (int)(clockDegrees * (min/60.0));
+        
+        //Can cast as positive if negative or can choose which to subtract 
+        //depending on size
+        if(min > hour)
+            return angleMin - angleHour;
+        else if(min == 0 && hour == 0)
+            return 360;
+        else
+            return angleHour - angleMin;
+    }
+       
 }

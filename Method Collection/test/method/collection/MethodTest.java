@@ -199,4 +199,135 @@ public class MethodTest {
         
         assertTrue(Arrays.equals(a, expResult));
     }
+    
+    @Test
+    public void testBinaryToDecimal(){
+        System.out.println("binaryToDecimal");
+        Method instance = new Method();
+        
+        int a = 10;
+        String expResult = "1010";
+        String result = instance.decimalToBinary(a);
+        
+        assertEquals(expResult, result);
+        
+    }
+    
+    @Test
+    public void testBinaryToDecimalLargeDecimal(){
+        System.out.println("binaryToDecimal");
+        Method instance = new Method();
+        
+        int a = 5462;
+        String expResult = "1010101010110";
+        String result = instance.decimalToBinary(a);
+        
+        assertEquals(expResult, result);
+        
+    }
+    
+    @Test
+    public void testClockHourAngleSmall()
+    {
+        System.out.println("clockAngle");
+        Method instance = new Method();
+        
+        int hour = 3;
+        int min = 0;
+        
+        int expResult = 90;
+        int result = instance.clockAngle(hour, min);
+        
+        assertEquals(expResult, result);
+    }
+    
+    @Test
+    public void testClockAngleHourMedium()
+    {
+        System.out.println("clockAngle");
+        Method instance = new Method();
+        
+        int hour = 6;
+        int min = 0;
+        
+        int expResult = 180;
+        int result = instance.clockAngle(hour, min);
+        
+        assertEquals(expResult, result);
+    }
+    
+    @Test
+    public void testClockAngleHourLarge()
+    {
+        System.out.println("clockAngle");
+        Method instance = new Method();
+        
+        int hour = 11;
+        int min = 0;
+        
+        int expResult = 330;
+        int result = instance.clockAngle(hour, min);
+        
+        assertEquals(expResult, result);
+    }
+    
+    @Test
+    public void testClockAngleMinuteSmall()
+    {
+        System.out.println("clockAngle");
+        Method instance = new Method();
+        
+        int hour = 3;
+        int min = 25;
+        
+        int expResult = 60;
+        int result = instance.clockAngle(hour, min);
+        
+        assertEquals(expResult, result);
+    }
+    
+    @Test
+    public void testClockAngleMinuteMedium()
+    {
+        System.out.println("clockAngle");
+        Method instance = new Method();
+        
+        int hour = 3;
+        int min = 33;
+        
+        int expResult = 108;
+        int result = instance.clockAngle(hour, min);
+        
+        assertEquals(expResult, result);
+    }
+    
+    @Test
+    public void testClockAngleMinuteLarge()
+    {
+        System.out.println("clockAngle");
+        Method instance = new Method();
+        
+        int hour = 0;
+        int min = 59;
+        
+        int expResult = 354;
+        int result = instance.clockAngle(hour, min);
+        
+        assertEquals(expResult, result);
+    }
+    
+    @Test
+    public void testClockAngleThreeSixty()
+    {
+        System.out.println("clockAngle");
+        Method instance = new Method();
+        
+        int hour = 0;
+        int min = 0;
+        
+        int expResult = 360;
+        int result = instance.clockAngle(hour, min);
+        
+        assertEquals(expResult, result);
+    }
 }
